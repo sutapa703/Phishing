@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phishing classifier</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <main>
+    <span class="eyebrow">WEBSITE SECURITY &middot; BATCH ANALYSIS</span>
+    <h1>Spot the signals.<br>Classify the risk.</h1>
+    <p class="intro">Upload website features to classify each row as phishing or safe. Download your results as a CSV.</p>
+    <section class="card" aria-labelledby="upload-title">
+      <h2 id="upload-title">Analyze a CSV</h2>
+      <p>Use the 30 encoded feature columns from the sample file. Maximum file size: 4 MB; 30,000 rows per batch.</p>
+      {% if error %}<div class="error" role="alert">{{ error }}</div>{% endif %}
+      <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
+        <label for="file">Choose your feature data</label>
+        <input id="file" type="file" name="file" accept=".csv,text/csv" required>
+        <button type="submit">Classify and download results</button>
+      </form>
+      <a href="{{ url_for('sample') }}">Download a sample CSV &rarr;</a>
+    </section>
+    <details>
+      <summary>CSV format and feature names</summary>
+      <p>Use numeric values -1, 0, or 1 with the same feature encoding as the training data. Use ? or an empty field for missing values. Do not include a Result column or raw URLs.</p>
+      <div class="features">{% for feature in features %}<code>{{ feature }}</code>{% endfor %}</div>
+    </details>
+    <p class="note">Results are model estimates from encoded website features. This tool does not visit or scan URLs.</p>
+  </main>
+</body>
+</html>

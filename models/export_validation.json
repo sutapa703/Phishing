@@ -1,0 +1,7 @@
+{
+  "rows": 11055,
+  "matching_predictions": 11055,
+  "missing_value_rows": 100,
+  "source_model_sha256": "97df6c92cfed4c42478bffddb38a5d8d09a8cce240c74ecbb0140843ce04f267",
+  "portable_model_sha256": "c712059aae62e8be449982e1cf7b4a9f2422a49d9bb208b2935c4df62c15e9c9"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "flask",
+  "functions": {
+    "app.py": {
+      "maxDuration": 60,
+      "excludeFiles": "{src/components/**,src/data_access/**,src/configuration/**,src/utils/**,src/pipeline/train_pipeline.py}"
+    }
+  }
+}

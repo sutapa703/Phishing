@@ -1,0 +1,25 @@
+.venv*/
+.env*
+!.env.example
+.git/
+.github/
+.pytest_cache/
+**/__pycache__/
+*.egg-info/
+logs/
+artifacts/
+predictions/
+prediction_artifacts/
+notebook implementation/
+upload_data_to_db/
+tests/
+docs/
+scripts/
+model.pkl
+train.py
+setup.py
+requirements-training.txt
+requirements-dev.txt
+
+.work/
+outputs/

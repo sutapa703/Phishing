@@ -1,0 +1,42 @@
+{
+  "url": "https://phishing-classifier-beryl.vercel.app",
+  "deployment_id": "dpl_FDYkApFVvgcWCvDfzLrjycfoH2Tw",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 2333,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/health",
+      "status": 200,
+      "bytes": 16,
+      "content_type": "application/json"
+    },
+    {
+      "path": "/static/css/style.css",
+      "status": 200,
+      "bytes": 1370,
+      "content_type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/sample",
+      "status": 200,
+      "bytes": 781,
+      "content_type": "text/csv; charset=utf-8"
+    },
+    {
+      "path": "/predict",
+      "status": 200,
+      "rows": 11055,
+      "matches_legacy": true,
+      "bytes": 837054,
+      "cache_control": "no-store"
+    },
+    {
+      "path": "/predict (missing file)",
+      "status": 400
+    }
+  ]
+}

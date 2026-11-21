@@ -1,0 +1,24 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+artifacts/
+logs/
+predictions/
+*.egg-info/
+.vercel
+.env*
+
+.venv-production/
+.env*
+!.env.example
+
+.work/
+node_modules/
+upload_data_to_db/
+notebook implementation/
+candidate-results.csv
+
+*.inspect.ndjson
+/static/

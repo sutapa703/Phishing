@@ -1,0 +1,8 @@
+Flask==3.1.2
+waitress==3.0.2
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.11.4
+xgboost-cpu==2.1.4; platform_system == "Linux"
+xgboost==2.1.4; platform_system != "Linux"
+python-dotenv==1.0.1

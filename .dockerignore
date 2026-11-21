@@ -1,0 +1,19 @@
+.venv*
+.git
+.env*
+__pycache__
+.pytest_cache
+logs
+artifacts
+predictions
+notebook implementation
+upload_data_to_db
+
+.vercel
+model.pkl
+tests
+docs
+
+.work
+outputs
+node_modules
